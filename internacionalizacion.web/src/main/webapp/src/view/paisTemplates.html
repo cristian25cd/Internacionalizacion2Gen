@@ -1,0 +1,13 @@
+<script type="text/template" id="pais">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-paisForm">
+    <% if(pais.id) {%>
+    <input type="hidden" name="id" value="<%= pais.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= pais.get('name') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 

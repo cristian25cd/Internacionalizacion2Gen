@@ -1,0 +1,14 @@
+{
+    "displayName" : "Convenio",
+    "name" : "convenio",
+    "templateName" : "convenio",
+    "url" : "convenio.html",
+    "server": "localhost:8080",
+    "server": "localhost:8080",
+    
+    "context": "/internacionalizacion.web/webresources/ConvenioMaster",
+    
+	
+    
+    "el" : "#main"
+}

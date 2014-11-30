@@ -1,0 +1,11 @@
+{
+    "displayName" : "EstadoIntercambio",
+    "name" : "estadoIntercambio",
+    "templateName" : "estadoIntercambio",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    
+	"context": "/internacionalizacion.web/webresources/EstadoIntercambio",
+    
+    "el" : "#main"
+}

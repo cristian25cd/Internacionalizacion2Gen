@@ -1,0 +1,11 @@
+{
+    "displayName" : "Experiencia",
+    "name" : "experiencia",
+    "templateName" : "experiencia",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    
+	"context": "/internacionalizacion.web/webresources/Experiencia",
+    
+    "el" : "#main"
+}

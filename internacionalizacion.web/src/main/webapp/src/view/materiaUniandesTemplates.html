@@ -1,0 +1,25 @@
+<script type="text/template" id="materiaUniandes">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-materiaUniandesForm">
+    <% if(materiaUniandes.id) {%>
+    <input type="hidden" name="id" value="<%= materiaUniandes.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= materiaUniandes.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="codigo">Codigo</label>
+    	<input type="text" class="form-control" id="codigo" name="codigo" placeholder="Enter value" value="<%= materiaUniandes.get('codigo') %>"/>	
+		</div>
+        <div class="form-group" >
+		<label for="profesor">Profesor</label>
+    	<input type="text" class="form-control" id="profesor" name="profesor" placeholder="Enter value" value="<%= materiaUniandes.get('profesor') %>"/>	
+		</div>
+        <div class="form-group" >
+		<label for="correo">Correo</label>
+    	<input type="text" class="form-control" id="correo" name="correo" placeholder="Enter value" value="<%= materiaUniandes.get('correo') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 

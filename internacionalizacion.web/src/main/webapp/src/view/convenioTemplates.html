@@ -1,0 +1,43 @@
+<script type="text/template" id="convenio">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-convenioForm">
+    <% if(convenio.id) {%>
+    <input type="hidden" name="id" value="<%= convenio.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= convenio.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+ 
+			<label for="paisidId">Pais Id</label> 
+            <select class="form-control" id="paisId" name="paisId">
+			  <option value="">None</option>
+            <% pais.each(function(paisid) { %> 
+              <option value="<%=paisid.get('id')%>" <% if(convenio.get('paisId')==paisid.get('id')) {%>selected<%}%> ><%=paisid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+		<div class="form-group" >
+ 
+			<label for="facultaduniandesidId">Facultaduniandes Id</label> 
+            <select class="form-control" id="facultaduniandesId" name="facultaduniandesId">
+			  <option value="">None</option>
+            <% facultadUniandes.each(function(facultaduniandesid) { %> 
+              <option value="<%=facultaduniandesid.get('id')%>" <% if(convenio.get('facultaduniandesId')==facultaduniandesid.get('id')) {%>selected<%}%> ><%=facultaduniandesid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+		<div class="form-group" >
+ 
+			<label for="departamentouniandesidId">Departamentouniandes Id</label> 
+            <select class="form-control" id="departamentouniandesId" name="departamentouniandesId">
+			  <option value="">None</option>
+            <% departamentoUniandes.each(function(departamentouniandesid) { %> 
+              <option value="<%=departamentouniandesid.get('id')%>" <% if(convenio.get('departamentouniandesId')==departamentouniandesid.get('id')) {%>selected<%}%> ><%=departamentouniandesid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+    </form>
+    </div>
+</script> 

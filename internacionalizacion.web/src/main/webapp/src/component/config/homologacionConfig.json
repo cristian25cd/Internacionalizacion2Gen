@@ -1,0 +1,11 @@
+{
+    "displayName" : "Homologacion",
+    "name" : "homologacion",
+    "templateName" : "homologacion",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    
+	"context": "/internacionalizacion.web/webresources/Homologacion",
+    
+    "el" : "#main"
+}

@@ -1,0 +1,31 @@
+<script type="text/template" id="cliente">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-clienteForm">
+    <% if(cliente.id) {%>
+    <input type="hidden" name="id" value="<%= cliente.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= cliente.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="codigo">Codigo</label>
+    	<input type="text" class="form-control" id="codigo" name="codigo" placeholder="Enter value" value="<%= cliente.get('codigo') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="correo">Correo</label>
+    	<input type="text" class="form-control" id="correo" name="correo" placeholder="Enter value" value="<%= cliente.get('correo') %>"/>	
+		</div>
+		<div class="form-group" >
+ 
+			<label for="tipoidId">Tipo Id</label> 
+            <select class="form-control" id="tipoId" name="tipoId">
+			  <option value="">None</option>
+            <% tipo.each(function(tipoid) { %> 
+              <option value="<%=tipoid.get('id')%>" <% if(cliente.get('tipoId')==tipoid.get('id')) {%>selected<%}%> ><%=tipoid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+    </form>
+    </div>
+</script> 

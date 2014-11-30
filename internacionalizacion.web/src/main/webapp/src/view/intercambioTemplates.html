@@ -1,0 +1,61 @@
+<script type="text/template" id="intercambio">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-intercambioForm">
+    <% if(intercambio.id) {%>
+    <input type="hidden" name="id" value="<%= intercambio.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= intercambio.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+			<label for="fechaCreacion">Fecha Creacion</label>
+    		<input type="text" data-converter="date" data-date-format="dd/mm/yyyy" class="form-control" id="fechaCreacion"  name="fechaCreacion" placeholder="Enter value" />
+    		<%= '<scr'+'ipt>' %>
+        	$('#fechaCreacion').datepicker({autoclose:true});
+        	$('#fechaCreacion').datepicker('setDate',App.Utils.Converter.date.toDate("<%= intercambio.get('fechaCreacion') %>"));
+    		<%= '</scr'+'ipt>' %>
+		</div>
+		<div class="form-group" >
+ 
+			<label for="estudianteidId">Estudiante Id</label> 
+            <select class="form-control" id="estudianteId" name="estudianteId">
+			  <option value="">None</option>
+            <% estudiante.each(function(estudianteid) { %> 
+              <option value="<%=estudianteid.get('id')%>" <% if(intercambio.get('estudianteId')==estudianteid.get('id')) {%>selected<%}%> ><%=estudianteid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+		<div class="form-group" >
+ 
+			<label for="estadoidId">Estado Id</label> 
+            <select class="form-control" id="estadoId" name="estadoId">
+			  <option value="">None</option>
+            <% estado.each(function(estadoid) { %> 
+              <option value="<%=estadoid.get('id')%>" <% if(intercambio.get('estadoId')==estadoid.get('id')) {%>selected<%}%> ><%=estadoid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+		<div class="form-group" >
+ 
+			<label for="experienciaidId">Experiencia Id</label> 
+            <select class="form-control" id="experienciaId" name="experienciaId">
+			  <option value="">None</option>
+            <% experiencia.each(function(experienciaid) { %> 
+              <option value="<%=experienciaid.get('id')%>" <% if(intercambio.get('experienciaId')==experienciaid.get('id')) {%>selected<%}%> ><%=experienciaid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+		<div class="form-group" >
+ 
+			<label for="convenioidId">Convenio Id</label> 
+            <select class="form-control" id="convenioId" name="convenioId">
+			  <option value="">None</option>
+            <% convenio.each(function(convenioid) { %> 
+              <option value="<%=convenioid.get('id')%>" <% if(intercambio.get('convenioId')==convenioid.get('id')) {%>selected<%}%> ><%=convenioid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+    </form>
+    </div>
+</script> 

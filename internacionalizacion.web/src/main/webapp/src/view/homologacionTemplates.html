@@ -1,0 +1,41 @@
+<script type="text/template" id="homologacion">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-homologacionForm">
+    <% if(homologacion.id) {%>
+    <input type="hidden" name="id" value="<%= homologacion.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= homologacion.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="materiaExtranjera">Materia Extranjera</label>
+    	<input type="text" class="form-control" id="materiaExtranjera" name="materiaExtranjera" placeholder="Enter value" value="<%= homologacion.get('materiaExtranjera') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="equivalenciaCreditos">Equivalencia Creditos</label>
+    	<input type="text" class="form-control" id="equivalenciaCreditos" name="equivalenciaCreditos" placeholder="Enter value" value="<%= homologacion.get('equivalenciaCreditos') %>"/>	
+		</div>
+		<div class="form-group" >
+ 
+			<label for="estadoidId">Estado Id</label> 
+            <select class="form-control" id="estadoId" name="estadoId">
+			  <option value="">None</option>
+            <% estado.each(function(estadoid) { %> 
+              <option value="<%=estadoid.get('id')%>" <% if(homologacion.get('estadoId')==estadoid.get('id')) {%>selected<%}%> ><%=estadoid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+		<div class="form-group" >
+ 
+			<label for="materiauniandesidId">Materiauniandes Id</label> 
+            <select class="form-control" id="materiauniandesId" name="materiauniandesId">
+			  <option value="">None</option>
+            <% materiaUniandes.each(function(materiauniandesid) { %> 
+              <option value="<%=materiauniandesid.get('id')%>" <% if(homologacion.get('materiauniandesId')==materiauniandesid.get('id')) {%>selected<%}%> ><%=materiauniandesid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+    </form>
+    </div>
+</script> 

@@ -1,0 +1,29 @@
+<script type="text/template" id="experiencia">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-experienciaForm">
+    <% if(experiencia.id) {%>
+    <input type="hidden" name="id" value="<%= experiencia.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="texto">Texto</label>
+    	<input type="text" class="form-control" id="texto" name="texto" placeholder="Enter value" value="<%= experiencia.get('texto') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= experiencia.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="titulo">Titulo</label>
+    	<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Enter value" value="<%= experiencia.get('titulo') %>"/>	
+		</div>
+		<div class="form-group" >
+			<label for="fecha">Fecha</label>
+    		<input type="text" data-converter="date" data-date-format="dd/mm/yyyy" class="form-control" id="fecha"  name="fecha" placeholder="Enter value" />
+    		<%= '<scr'+'ipt>' %>
+        	$('#fecha').datepicker({autoclose:true});
+        	$('#fecha').datepicker('setDate',App.Utils.Converter.date.toDate("<%= experiencia.get('fecha') %>"));
+    		<%= '</scr'+'ipt>' %>
+		</div>
+    </form>
+    </div>
+</script> 

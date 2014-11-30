@@ -1,0 +1,11 @@
+{
+    "displayName" : "EstadoHomologacion",
+    "name" : "estadoHomologacion",
+    "templateName" : "estadoHomologacion",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    
+	"context": "/internacionalizacion.web/webresources/EstadoHomologacion",
+    
+    "el" : "#main"
+}

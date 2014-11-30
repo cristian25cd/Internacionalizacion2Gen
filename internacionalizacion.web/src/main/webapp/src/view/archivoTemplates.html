@@ -1,0 +1,17 @@
+<script type="text/template" id="archivo">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-archivoForm">
+    <% if(archivo.id) {%>
+    <input type="hidden" name="id" value="<%= archivo.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= archivo.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="link">Link</label>
+    	<input type="text" class="form-control" id="link" name="link" placeholder="Enter value" value="<%= archivo.get('link') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 

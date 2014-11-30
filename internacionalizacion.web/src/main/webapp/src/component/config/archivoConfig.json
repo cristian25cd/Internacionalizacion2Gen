@@ -1,0 +1,11 @@
+{
+    "displayName" : "Archivo",
+    "name" : "archivo",
+    "templateName" : "archivo",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    
+	"context": "/internacionalizacion.web/webresources/Archivo",
+    
+    "el" : "#main"
+}

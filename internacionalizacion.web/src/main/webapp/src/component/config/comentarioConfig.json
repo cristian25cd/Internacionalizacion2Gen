@@ -1,0 +1,11 @@
+{
+    "displayName" : "Comentario",
+    "name" : "comentario",
+    "templateName" : "comentario",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    
+	"context": "/internacionalizacion.web/webresources/Comentario",
+    
+    "el" : "#main"
+}

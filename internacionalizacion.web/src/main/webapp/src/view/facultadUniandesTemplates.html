@@ -1,0 +1,13 @@
+<script type="text/template" id="facultadUniandes">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-facultadUniandesForm">
+    <% if(facultadUniandes.id) {%>
+    <input type="hidden" name="id" value="<%= facultadUniandes.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= facultadUniandes.get('name') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 

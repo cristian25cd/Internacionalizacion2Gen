@@ -1,0 +1,11 @@
+{
+    "displayName" : "TipoEstudiante",
+    "name" : "tipoEstudiante",
+    "templateName" : "tipoEstudiante",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    
+	"context": "/internacionalizacion.web/webresources/TipoEstudiante",
+    
+    "el" : "#main"
+}

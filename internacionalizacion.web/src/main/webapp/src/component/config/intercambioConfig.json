@@ -1,0 +1,11 @@
+{
+    "displayName" : "Intercambio",
+    "name" : "intercambio",
+    "templateName" : "intercambio",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    
+	"context": "/internacionalizacion.web/webresources/Intercambio",
+    
+    "el" : "#main"
+}

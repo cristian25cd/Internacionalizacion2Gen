@@ -1,0 +1,11 @@
+{
+    "displayName" : "Pais",
+    "name" : "pais",
+    "templateName" : "pais",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    
+	"context": "/internacionalizacion.web/webresources/Pais",
+    
+    "el" : "#main"
+}
